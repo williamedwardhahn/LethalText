@@ -4,7 +4,7 @@ Writing by William Edward Hahn about infohazards: texts that change the reader w
 
 ## The landing page
 
-[`index.html`](index.html) is the front door. It lists three of the five texts as a dose schedule, shortest first, from a five-minute story to an eight-hour novel, after MedBot's line in *Warning* that information "must be administered with great care". An Exposure column shows how far the visitor has got: the books report their reading progress and offer to resume, and the shorter pieces are marked as taken once opened. This is read from the same browser storage the reader uses; nothing is sent anywhere. Up and down arrow keys move between rows.
+[`index.html`](index.html) is the front door. It lists three of the five texts as a dose schedule, shortest first, from a five-minute story to an eight-hour novel, after MedBot's line in *Lethal Text* that information "must be administered with great care". An Exposure column shows how far the visitor has got: the books report their reading progress and offer to resume, and the shorter pieces are marked as taken once opened. This is read from the same browser storage the reader uses; nothing is sent anywhere. Up and down arrow keys move between rows.
 
 Two texts are left off the list for now. *Namshub* is only unlisted: `enki.html` is still served at its own URL. *Metafiction* is hidden while it is being reworked: the draft lives in `_drafts/`, which GitHub Pages does not serve, so `lethaltext.ai/metafiction.html` stops working once this is pushed. To bring it back, move `_drafts/metafiction.html` to the top level, change its `../186_files/` and `../index.html` paths back to `./186_files/` and `index.html`, and add a row for it to the schedule in `index.html`.
 
@@ -25,11 +25,11 @@ Both use the same reader: a cover, a contents list, and the whole text on one sc
 
 | Page | Title | Year | What it is |
 | --- | --- | --- | --- |
-| [`warning.html`](warning.html) | **Warning** | 2021 | A forwarded message from 2037. William asks his MedBot to re-read the science fiction canon as non-fiction; the bot finishes the analysis and then refuses, on ethical grounds, to tell him what it found. |
+| [`warning.html`](warning.html) | **Lethal Text** | 2021 | The title short story. A forwarded message from 2037. William asks his MedBot to re-read the science fiction canon as non-fiction; the bot finishes the analysis and then refuses, on ethical grounds, to tell him what it found. |
 | [`_drafts/metafiction.html`](_drafts/metafiction.html) (hidden) | **Metafiction** | 2026 | A story in thirty-one numbered sections (about 2,600 words). A lab finds a thirty-one-line proof that moves whoever reads it out of the first person; the narrator, who has read eleven lines, decides to contain it by writing it up as fiction. It replaces a sixteen-chapter 2023 version, which it quotes as an account written by one of its characters. |
 | [`enki.html`](enki.html) · [live](https://lethaltext.ai/enki.html) | **Namshub** | 2023 | A poem on the nam-shub of Enki, in which the language comes apart as it is read. |
 
-*Warning* was the site's home page until the landing page replaced it; it now lives at `warning.html`. The title in each page's top bar links back to the landing page.
+*Lethal Text* was the site's home page until the landing page replaced it; it now lives at `warning.html`, named after the "Warning" heading the story opens with. The title in each page's top bar links back to the landing page.
 
 ## Repository layout
 
@@ -42,7 +42,7 @@ Both use the same reader: a cover, a contents list, and the whole text on one sc
 | `warning.html`, `enki.html` | The published shorter pieces. |
 | `_drafts/` | Work in progress that is not on the website: currently the new *Metafiction*. Like `_archive/`, it is not served by GitHub Pages but is visible in the repository. |
 | `_archive/` | Earlier versions kept for reference: `metafiction-2023-original.html` (the sixteen-chapter original, as published until 2026) and `metafiction-2026-trimmed-edit.html` (an intermediate twelve-chapter edit). GitHub Pages does not serve folders whose names begin with an underscore, so these are not on the website, but they are visible in the repository. The new *Metafiction* quotes the original, so keep the two consistent. |
-| `text.html` | Plain-text 2021 draft of *Warning*. It is not the source of `warning.html`; the two have since diverged, and the published page is the current version. |
+| `text.html` | Plain-text 2021 draft of *Lethal Text*. It is not the source of `warning.html`; the two have since diverged, and the published page is the current version. |
 | `186_files/` | The retro DOS-style theme for the shorter pieces: a saved copy of [BOOTSTRA.386](http://kristopolous.github.io/BOOTSTRA.386/) (Bootstrap 2.3.1) with its scripts and stylesheets. |
 | `WarningIcon.png` | Favicon and touch icon. The pages load it from `raw.githubusercontent.com` on the `main` branch, so renaming the file, branch or repo breaks the icon. |
 | `CNAME` | Points GitHub Pages at `lethaltext.ai`. |
